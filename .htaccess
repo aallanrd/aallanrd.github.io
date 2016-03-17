@@ -1,0 +1,14 @@
+RewriteCond %{HTTP_HOST} ^www\.aallanrd\.com$
+RewriteRule ^/?$ "http\:\/\/aallanrd\.com\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^107\.180\.50\.224
+RewriteRule (.*) http://www.aallanrd.com/$1 [R=301,L]
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>
