@@ -2,7 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9890b2bd-c094-4d88-ade3-40df87ce4d0d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/apps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ayuda.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/email-premium.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/email-regular.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/empresas.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/envios.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/getuser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hardware-smartline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_files.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index_files/email.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/perfil.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/premium-plan.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regular-plan.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sitemap.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/software-smartline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/terminos-servicio.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about-me.html" afterPath="$PROJECT_DIR$/about-me.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacto.html" afterPath="$PROJECT_DIR$/contacto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/privacidad.html" afterPath="$PROJECT_DIR$/privacidad.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search_results.html" afterPath="$PROJECT_DIR$/search_results.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/indeed/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/a4.jpg" afterPath="$PROJECT_DIR$/index_files/images/a4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/a7.jpg" afterPath="$PROJECT_DIR$/index_files/images/a7.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/ambiance.css" afterPath="$PROJECT_DIR$/index_files/css/ambiance.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/animate.css" afterPath="$PROJECT_DIR$/index_files/css/animate.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/bootstrap.min.css" afterPath="$PROJECT_DIR$/index_files/css/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/bootstrap.min.js" afterPath="$PROJECT_DIR$/index_files/css/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/codemirror.css" afterPath="$PROJECT_DIR$/index_files/css/codemirror.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/font-awesome.css" afterPath="$PROJECT_DIR$/index_files/css/font-awesome.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/inspinia.js" afterPath="$PROJECT_DIR$/index_files/js/inspinia.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/jquery-2.1.1.js" afterPath="$PROJECT_DIR$/index_files/js/jquery-2.1.1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/jquery.metisMenu.js" afterPath="$PROJECT_DIR$/index_files/js/jquery.metisMenu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/jquery.slimscroll.min.js" afterPath="$PROJECT_DIR$/index_files/js/jquery.slimscroll.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/pace.min.js" afterPath="$PROJECT_DIR$/index_files/js/pace.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/profile.jpg" afterPath="$PROJECT_DIR$/index_files/images/profile.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/profile_small.jpg" afterPath="$PROJECT_DIR$/index_files/images/profile_small.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/style.css" afterPath="$PROJECT_DIR$/index_files/css/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_files/toastr.min.css" afterPath="$PROJECT_DIR$/index_files/css/toastr.min.css" />
     </list>
     <ignored path="aallanrd.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,21 +64,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="393" column="0" selection-start-line="393" selection-start-column="0" selection-end-line="393" selection-end-column="0" />
+            <state relative-caret-position="467">
+              <caret line="234" column="39" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about-me.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about-me.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about-me.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="147" column="26" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="privacidad.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/privacidad.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="230" column="95" selection-start-line="230" selection-start-column="95" selection-end-line="230" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -58,9 +109,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index_files/email.php" />
+        <option value="$PROJECT_DIR$/robots.txt" />
         <option value="$PROJECT_DIR$/about-me.html" />
+        <option value="$PROJECT_DIR$/privacidad.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -131,6 +184,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="js-jscs-nodeInterpreter" value="D:\Entornos\NodeJS\node.exe" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Sites\aallanrd.github.io\index_files\images" />
+      <recent name="D:\Sites\aallanrd.github.io\index_files\js" />
+      <recent name="D:\Sites\aallanrd.github.io\index_files\css" />
+      <recent name="D:\Sites\aallanrd.github.io\indeed" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
@@ -199,12 +260,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1458242494261</updated>
-      <workItem from="1460159478761" duration="339000" />
+      <workItem from="1460159478761" duration="1013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339000" />
+    <option name="totallyTimeSpent" value="1013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -276,14 +337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="393" column="0" selection-start-line="393" selection-start-column="0" selection-end-line="393" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index_files/email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -295,6 +348,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="147" column="26" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/privacidad.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="230" column="95" selection-start-line="230" selection-start-column="95" selection-end-line="230" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="234" column="39" selection-start-line="234" selection-start-column="39" selection-end-line="234" selection-end-column="39" />
           <folding />
         </state>
       </provider>

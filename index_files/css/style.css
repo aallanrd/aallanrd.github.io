@@ -161,7 +161,7 @@ h5 {
 }
 .nav-header {
   padding: 33px 25px;
-  background: url("./images/pattern.jpg") no-repeat;
+  background: url("../images/pattern.jpg") no-repeat;
 }
 .pace-done .nav-header {
   transition: all 0.4s;

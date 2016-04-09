@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allan Rojas D.</title>
-    <link href="index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="index_files/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="index_files/animate.css" rel="stylesheet">
-    <link href="index_files/codemirror.css" rel="stylesheet">
-    <link href="index_files/ambiance.css" rel="stylesheet">
-    <link href="index_files/style.css" rel="stylesheet">
+    <link href="index_files/css/animate.css" rel="stylesheet">
+    <link href="index_files/css/codemirror.css" rel="stylesheet">
+    <link href="index_files/css/ambiance.css" rel="stylesheet">
+    <link href="index_files/css/style.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="57x57" href="index_files/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="index_files/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="index_files/images/apple-icon-72x72.png">
@@ -106,7 +106,7 @@
                             <li>
                                 <div class="dropdown-messages-box">
                                     <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="index_files/a7.jpg">
+                                        <img alt="image" class="img-circle" src="index_files/images/a7.jpg">
                                     </a>
                                     <div class="media-body">
                                         <strong>Tienes que iniciar sesión</strong> para ver <strong>SmartBox</strong>. <br>
@@ -225,43 +225,7 @@
                 </ol>
             </div>
 
-            <div class="container">
-                <div class="row"></div>
-                <br><br><br>
-                <div class="row text-center ">
 
-                    <div class="col-md-3 ">
-                        <br>
-                        <i class="fa fa-houzz fa-lg fa-5x  "></i>
-                        <h1>Introducción </h1>
-                        <p>  <p> La idea principal de <strong> SmartLine</strong> es encontrar y definir puntos que tienen la necesidad de conectar, y
-                        unirlos por una linea inteligente.
-                        Es en ese concepto que permitiremos organizar mucho mejor las ideas y el <strong>flujo de comunicación.</strong></p>
-                        <button class="btn btn-success">Aprender más</button>
-                    </div>
-                    <div class="col-md-3">
-                        <br>
-                        <i class="fa fa-connectdevelop fa-lg fa-5x  "></i>
-                        <h1> Desarrollo Web </h1>
-                        <p>
-                            Hay dos opciones, mostrar información relevante a <strong>potenciales clientes</strong> , sobre lo que usted ofrece.
-                            O crear canales de comunicación y productividad con <strong>proveedores y colaboradores </strong>.
-
-                        </p>
-                        <button class="btn btn-success">Aprender más</button>
-                    </div>
-                    <div class="col-md-3">
-                        <br>
-                        <i class="fa fa-tasks fa-lg fa-5x  "></i>
-                        <h1>Hosting </h1>
-                        <p> Su empresa necesita un <strong> servidor</strong> - un lugar donde se almacenan sus datos de forma segura
-                        y se puede acceder a través de Internet.
-                       </p>
-                        <button class="btn btn-success">Aprender más</button>
-                    </div>
-
-                </div>
-            </div>
 
 
             <div class="col-lg-10 ">
@@ -280,136 +244,16 @@
 
     </div>
 </div>
-<script>window.twttr = (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
-
-    t._e = [];
-    t.ready = function(f) {
-        t._e.push(f);
-    };
-
-    return t;
-}(document, "script", "twitter-wjs"));
-</script>
-<script>
-    twttr.widgets.load();
-</script>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '504422386408681',
-            xfbml      : true,
-            version    : 'v2.5'
-        });
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-<script>
-    // This is called with the results from from FB.getLoginStatus().
-    function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        // The response object is returned with a status field that lets the
-        // app know the current login status of the person.
-        // Full docs on the response object can be found in the documentation
-        // for FB.getLoginStatus().
-        if (response.status === 'connected') {
-            // Logged into your app and Facebook.
-            testAPI();
-        } else if (response.status === 'not_authorized') {
-            // The person is logged into Facebook, but not your app.
-            document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app.';
-        } else {
-            // The person is not logged into Facebook, so we're not sure if
-            // they are logged into this app or not.
-            document.getElementById('status').innerHTML = 'Please log ' +
-                    'into Facebook.';
-        }
-    }
-
-    // This function is called when someone finishes with the Login
-    // Button.  See the onlogin handler attached to it in the sample
-    // code below.
-    function checkLoginState() {
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-    }
-
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '504422386408681',
-            cookie     : true,  // enable cookies to allow the server to access
-                                // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.5' // use graph api version 2.5
-        });
-
-        // Now that we've initialized the JavaScript SDK, we call
-        // FB.getLoginStatus().  This function gets the state of the
-        // person visiting this page and can return one of three states to
-        // the callback you provide.  They can be:
-        //
-        // 1. Logged into your app ('connected')
-        // 2. Logged into Facebook, but not your app ('not_authorized')
-        // 3. Not logged into Facebook and can't tell if they are logged into
-        //    your app or not.
-        //
-        // These three cases are handled in the callback function.
-
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
 
 
 
-    };
-
-    // Load the SDK asynchronously
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    // Here we run a very simple test of the Graph API after login is
-    // successful.  See statusChangeCallback() for when this call is made.
-    function testAPI() {
-
-        FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name);
-            // similar behavior as an HTTP redirect
-            window.location.replace("http://aallanrd.com/perfil.html");
-        });
-        FB.api('/me', function(response) {
-            console.log(JSON.stringify(response));
-
-        });
-    }
-</script>
 <!-- Mainly scripts -->
-<script src="index_files/jquery-2.1.1.js"></script>
-<script src="index_files/bootstrap.min.js"></script>
-<script src="index_files/jquery.metisMenu.js"></script>
-<script src="index_files/jquery.slimscroll.min.js"></script>
+<script src="index_files/js/jquery-2.1.1.js"></script>
+<script src="index_files/css/bootstrap.min.js"></script>
+<script src="index_files/js/jquery.metisMenu.js"></script>
+<script src="index_files/js/jquery.slimscroll.min.js"></script>
 <!-- Custom and plugin javascript -->
-<script src="index_files/inspinia.js"></script>
-<script src="index_files/pace.min.js"></script>
+<script src="index_files/js/inspinia.js"></script>
+<script src="index_files/js/pace.min.js"></script>
 </body>
 </html>

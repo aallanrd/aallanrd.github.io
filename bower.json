@@ -1,0 +1,28 @@
+{
+  "name": "aallanrd.github.io",
+  "homepage": "https://github.com/aallanrd/aallanrd.github.io",
+  "authors": [
+    "Allan Rojas <allanjose91@gmail.com>"
+  ],
+  "description": "Main site over github.io",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "aallanrd",
+    "Allan",
+    "Rojas",
+    "D.",
+    "sitios",
+    "web",
+    "costa",
+    "rica"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
