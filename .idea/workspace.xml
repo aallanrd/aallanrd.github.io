@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9890b2bd-c094-4d88-ade3-40df87ce4d0d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about-me.html" afterPath="$PROJECT_DIR$/about-me.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacto.html" afterPath="$PROJECT_DIR$/contacto.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/privacidad.html" afterPath="$PROJECT_DIR$/privacidad.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index_files/images/pattern.jpg" afterPath="$PROJECT_DIR$/index_files/images/pattern.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index_files/images/pp.jpg" afterPath="$PROJECT_DIR$/index_files/images/pp.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index_files/js/inspinia.js" afterPath="$PROJECT_DIR$/index_files/js/inspinia.js" />
     </list>
     <ignored path="aallanrd.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="privacidad.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="privacidad.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/privacidad.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="82">
@@ -79,6 +79,23 @@
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pattern.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_files/images/pattern.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inspinia.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index_files/js/inspinia.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="4354" selection-start-line="0" selection-start-column="4354" selection-end-line="0" selection-end-column="4354" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,6 +121,7 @@
         <option value="$PROJECT_DIR$/contacto.html" />
         <option value="$PROJECT_DIR$/about-me.html" />
         <option value="$PROJECT_DIR$/privacidad.html" />
+        <option value="$PROJECT_DIR$/index_files/js/inspinia.js" />
       </list>
     </option>
   </component>
@@ -158,6 +176,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="aallanrd.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aallanrd.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aallanrd.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index_files" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aallanrd.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aallanrd.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index_files" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,12 +311,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1458242494261</updated>
-      <workItem from="1460159478761" duration="4311000" />
+      <workItem from="1460159478761" duration="4899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4311000" />
+    <option name="totallyTimeSpent" value="4899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -414,6 +464,19 @@
           <folding>
             <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_files/images/pattern.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index_files/js/inspinia.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4354" selection-start-line="0" selection-start-column="4354" selection-end-line="0" selection-end-column="4354" />
+          <folding />
         </state>
       </provider>
     </entry>
