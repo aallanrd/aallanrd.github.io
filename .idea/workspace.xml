@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9890b2bd-c094-4d88-ade3-40df87ce4d0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/movil-apps.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/colaboracion.html" afterPath="$PROJECT_DIR$/colaboracion.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.html" afterPath="$PROJECT_DIR$/database.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desktop-apps.html" afterPath="$PROJECT_DIR$/desktop-apps.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-apps.html" afterPath="$PROJECT_DIR$/web-apps.html" />
     </list>
     <ignored path="aallanrd.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="colaboracion.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="colaboracion.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/colaboracion.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -60,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="119" column="34" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
+            <state relative-caret-position="409">
+              <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -163,8 +158,8 @@
         <option value="$PROJECT_DIR$/web-apps.html" />
         <option value="$PROJECT_DIR$/movil-apps.html" />
         <option value="$PROJECT_DIR$/desktop-apps.html" />
-        <option value="$PROJECT_DIR$/database.html" />
         <option value="$PROJECT_DIR$/colaboracion.html" />
+        <option value="$PROJECT_DIR$/database.html" />
       </list>
     </option>
   </component>
@@ -333,12 +328,12 @@
       <option name="presentableId" value="Default" />
       <updated>1458242494261</updated>
       <workItem from="1460159478761" duration="15726000" />
-      <workItem from="1460185102663" duration="1321000" />
+      <workItem from="1460185102663" duration="1455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17047000" />
+    <option name="totallyTimeSpent" value="17181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1375" height="744" extended-state="0" />
@@ -599,18 +594,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="119" column="34" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/colaboracion.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
           <folding />
         </state>
       </provider>
