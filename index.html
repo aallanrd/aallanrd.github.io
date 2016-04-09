@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allan Rojas D.</title>
     <link href="index_files/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link href="index_files/css/animate.css" rel="stylesheet">
     <link href="index_files/css/codemirror.css" rel="stylesheet">
     <link href="index_files/css/ambiance.css" rel="stylesheet">
@@ -64,21 +64,9 @@
                     </a>
                     <ul class="nav nav-second-level collapse ">
                         <li ><a href="privacidad.html" >Condiciones y Privacidad</a></li>
-                        <li><a href="apps.html">Aplicaciones</a></li>
-                        <li><a href="ayuda.html">Ayuda</a></li>
+
                     </ul>
                 </li>
-                <li>
-                    <a href="software-smartline.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Sofware SmartLine </span>  </a>
-                </li>
-                <li>
-                    <a href="hardware-smartline.html"><i class="fa fa-cube"></i> <span class="nav-label">Hardware SmartLine</span></a>
-                </li>
-                <li>
-                    <a> <i class="fa fa-facebook"></i> Facebook</a>
-
-                </li>
-                <li><a><i class="fa fa-twitter"></i>Twitter</a></li>
 
             </ul>
         </div>
@@ -87,128 +75,23 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+
+                        </li>
+                    </ul>
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    <form role="search" class="navbar-form-custom" action="search_results.html">
+                    <form role="search" class="navbar-form-custom" action="search_results.php">
                         <div class="form-group">
-                            <input type="text" placeholder="Barra de Búsqueda" class="form-control" name="top-search" id="top-search">
+                            <input type="text" placeholder="Barra de Búsqueda" class="form-control"
+                                   name="top-search" id="top-search">
                         </div>
                     </form>
+                    <a href="http://github.com/aallanrd/aallanrd.github.io" target="_blank" class="navbar-minimalize minimalize-styl-2 btn btn-success pull-right">
+                        <i class="fa fa-github"></i>Ver en Github</a>
+
                 </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li>
-                        <span class="m-r-sm text-muted welcome-message">.</span>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-envelope"></i>  <span class="label label-warning">0</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="index_files/images/a7.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <strong>Tienes que iniciar sesión</strong> para ver <strong>SmartBox</strong>. <br>
-                                    </div>
-                                </div>
-                            </li>
-                            El plan de mensajería en linea para comunicar, colaborar y transmitir ideas con sus empleados
-                            proveedores o clientes.
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a href="mailbox.html" class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-key"></i> <strong>Iniciar Sesion</strong>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown s">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell"></i>  <span class="label label-primary">0</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="mailbox.html">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> Mensajes
-                                        <span class="pull-right text-muted small">Buzones Inteligentes</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="profile.html">
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> Seguidores
-                                        <span class="pull-right text-muted small"> Seguir Proyectos</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="grid_options.html">
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Notificaciones
-                                        <span class="pull-right text-muted small"> Smart Connect </span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a href="notifications.html" class="dropdown-toggle" data-toggle="dropdown">
-                                        <strong>Inicia Sesión para ver Notificaciones</strong>
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesión</b>
-                            <span class="caret"></span></a>
-                        <ul id="login-dp" class="dropdown-menu ">
-                            <li>
-                                <div class="row white-bg">
-                                    <div class="col-md-12">
-                                        Login via Facebook
-                                        <div class="social-buttons">
-                                            <fb:login-button  scope="public_profile,email"  scope="public_profile,email"
-                                                              onlogin="checkLoginState();">
-                                            </fb:login-button>
-                                        </div>
-                                        or
-                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                            <div class="form-group">
-                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                <div class="help-block text-right"><a href="">Olvidaste la contraseña ?</a></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="" class="btn btn-primary btn-block">Ingresar</button>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> No olvidarme
-                                                </label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="bottom text-center">
-                                        Nuevo aquí ? <a href="#"><b>Registrate</b></a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    </ul>
+
             </nav>
         </div>
         <div class="row wrapper border-bottom white-bg page-heading ">
