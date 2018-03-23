@@ -1,12 +1,8 @@
-angular.module('todoApp', ['$scope'])
-  .controller('TodoListController', $scope,  function() {
+angular.module('scopeExample', [])
+.controller('MyController', ['$scope', function($scope) {
+  $scope.start = 'World';
 
-    
-	$scope.start;
-
-    
-
-
-
-
-  });
+  $scope.sayHello = function() {
+    $scope.greeting = 'Hello ' + $scope.start + '!';
+  };
+}]);
