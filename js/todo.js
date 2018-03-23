@@ -1,8 +1,19 @@
 angular.module('App', [])
 .controller('Controller', ['$scope', function($scope) {
-  $scope.start = 'World';
+  
 
   $scope.sayHello = function() {
-    $scope.greeting = 'Hello ' + $scope.start + '!';
+    
+	$scope.calendars = [];
+	$scope.date = new Date($scope.date);
+	
+	$scope.start = 0;
+	
+    while($scope.start > $scope.number){
+		
+		$scope.calendars.push("Calendar" + $scope.start );
+		$scope.start + 7;
+	}		
+	
   };
 }]);
