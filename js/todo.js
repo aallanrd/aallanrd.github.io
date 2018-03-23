@@ -12,7 +12,7 @@ angular.module('App', [])
     while($scope.start < $scope.number){
 		
 		//Pushing Calendar to Array
-		$scope.calendar = function(){
+	
 		$scope.newCalendar = {
 			
 			"id":$scope.start,
