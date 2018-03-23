@@ -28,7 +28,7 @@ angular.module('App', [])
 			
 		
 		//Adding days to calendar
-		date3.setDate(date3.getDate() + 7);
+		$scope.date3.setDate($scope.date3.getDate() + 7);
 		
 		//Add week days to count variable
 		start = start + 7;
