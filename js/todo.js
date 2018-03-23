@@ -12,20 +12,25 @@ angular.module('App', [])
     while($scope.start < $scope.number){
 		
 		//Pushing Calendar to Array
-		$scope.calendars.push("Calendar" + $scope.start + "--> Date: " + $scope.date );
+		$scope.calendar = function(){
+			var newCalendar = {
+				
+				"id":$scope.start,
+				"date":$scope.date
+			 }
+			$scope.calendars.push(newCalendar);
+			}
 		
 		//Adding days to calendar
-		$scope.calendar = $scope.date.setDate($scope.date.getDate() + 7);
+		$scope.date.setDate($scope.date.getDate() + 7);
 		
 		//Add week days to count variable
 		$scope.start = $scope.start + 7;
 		
 	}	
-	$scope.calendars.push("{'calendar':" + $scope.start + "'date':'" + $scope.date + "'}" );
 	
-	;
 	
-	console.log("ENded..");
+	console.log("Ended..");
 	
   };
 }]);
