@@ -12,7 +12,7 @@ angular.module('App', [])
     while($scope.start < $scope.number){
 		console.log("Pushing..");
 		$scope.calendars.push("Calendar" + $scope.start );
-		$scope.start + 7;
+		$scope.start = $scope.start + 7;
 	}		
 	console.log("ENded..");
 	
