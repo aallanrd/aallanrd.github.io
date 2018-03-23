@@ -5,28 +5,28 @@ angular.module('App', [])
   $scope.generate = function() {
     
 	$scope.calendars = [];
-	$scope.date = new Date($scope.date);
+	var date = new Date($scope.date);
 	
-	$scope.start = 0;
+	var start = 0;
 	
-    while($scope.start < $scope.number){
+    while(start < $scope.number){
 		
 		//Pushing Calendar to Array
 	
 		$scope.newCalendar = {
 			
-			"id":$scope.start,
-			"date":$scope.date
+			"id": start,
+			"date": date
 		 };
 			 
 		$scope.calendars.push($scope.newCalendar);
 			
 		
 		//Adding days to calendar
-		$scope.date.setDate($scope.date.getDate() + 7);
+		date.setDate(date.getDate() + 7);
 		
 		//Add week days to count variable
-		$scope.start = $scope.start + 7;
+		start = start + 7;
 		
 	}	
 	
