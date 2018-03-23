@@ -13,14 +13,17 @@ angular.module('App', [])
 		
 		//Pushing Calendar to Array
 		$scope.calendar = function(){
-			var newCalendar = {
-				
-				"id":$scope.start,
-				"date":$scope.date
-			 }
-			$scope.calendars.push(newCalendar);
-			}
-		
+		$scope.newCalendar = {
+			
+			"id":$scope.start,
+			"date":$scope.date
+		 };
+			 
+	$scope.calendars.push($scope.newCalendar);
+			
+			
+			
+		console.log("Push..");
 		//Adding days to calendar
 		$scope.date.setDate($scope.date.getDate() + 7);
 		
