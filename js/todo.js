@@ -13,6 +13,7 @@ angular.module('App', [])
 		console.log("Pushing..");
 		$scope.calendars.push("Calendar" + $scope.start );
 		$scope.start = $scope.start + 7;
+		console.log("Pushing.." + $scope.start);
 	}		
 	console.log("ENded..");
 	
