@@ -19,11 +19,9 @@ angular.module('App', [])
 			"date":$scope.date
 		 };
 			 
-	$scope.calendars.push($scope.newCalendar);
+		$scope.calendars.push($scope.newCalendar);
 			
-			
-			
-		console.log("Push..");
+		
 		//Adding days to calendar
 		$scope.date.setDate($scope.date.getDate() + 7);
 		
