@@ -9,6 +9,8 @@ angular.module('App', [])
 	var date2 = new Date($scope.date);
 	$scope.date3 = date2;
 	
+	var nb=$('#date').val();
+	console.log(nb);
 	
 	var start = 0;
 	
