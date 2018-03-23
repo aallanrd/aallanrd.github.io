@@ -20,7 +20,11 @@ angular.module('App', [])
 		//Add week days to count variable
 		$scope.start = $scope.start + 7;
 		
-	}		
+	}	
+	$scope.calendars.push("{'calendar':" + $scope.start + "'date':'" + $scope.date + "'}" );
+	
+	;
+	
 	console.log("ENded..");
 	
   };
