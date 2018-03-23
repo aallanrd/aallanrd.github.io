@@ -21,7 +21,7 @@ angular.module('App', [])
 		newCalendar = {
 			
 			"id": start,
-			"date": date3
+			"date": $scope.date3
 		 };
 			 
 		$scope.calendars.push(newCalendar);
