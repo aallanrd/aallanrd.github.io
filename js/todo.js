@@ -10,10 +10,16 @@ angular.module('App', [])
 	$scope.start = 0;
 	
     while($scope.start < $scope.number){
-		console.log("Pushing..");
-		$scope.calendars.push("Calendar" + $scope.start );
+		
+		//Pushing Calendar to Array
+		$scope.calendars.push("Calendar" + $scope.start + "--> Date: " + $scope.date );
+		
+		//Adding days to calendar
+		$scope.calendar = $scope.date.setDate($scope.date.getDate() + 7);
+		
+		//Add week days to count variable
 		$scope.start = $scope.start + 7;
-		console.log("Pushing.." + $scope.start);
+		
 	}		
 	console.log("ENded..");
 	
