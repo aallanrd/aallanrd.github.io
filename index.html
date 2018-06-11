@@ -1,44 +1,78 @@
 <!doctype html>
 <html ng-app="App">
-  <head>
-    <script src="js/angular.min.js"></script>
-    <script src="js/todo.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
-  <body class="container-fluid">
-    <br />
-    <h2> Local JS </h2>
-    <div ng-controller="Controller as control">
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+      <script src="js/controller.js"></script>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <body class="container-fluid">
+      <br />
+      <div ng-controller="Controller as control">
+         <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-2">
+               <h2 class="text-center"> Local JS </h2>
+               <input class="form-control form-control-lg" id="date" type="date" ng-model="date" placeholder="Start Date">
+               <br />
+               <input class="form-control form-control-lg" id="number" type="number" ng-model="number" size="30" placeholder="Number">
+               <br />
+               <input class="form-control form-control-lg" type="text" ng-model="code"  size="30" placeholder="Code">
+               <br />
+               <button class="btn-primary btn-block btn-lg" type="submit" value="Generate" ng-click="generate()"> Generar  </button>
+            </div>
+            <div class="col-md-4">
+            </div>
+         </div>
 
 
-        <input id="date" type="date" ng-model="date"  size="30"
-               placeholder="Start Date">
+         <div class="row" >
+            <div class="col-md-10 panel-primary" ng-repeat= "m in month">
+               <div class="text-center">
 
-       <input type="number" ng-model="number"  size="30"
-                      placeholder="Number">
+               </div>
+               <div class="row">
 
-      <input type="text" ng-model="code"  size="30"
-                             placeholder="Code">
+                 <table id="tableb" class="table ">
+                       <thead>
+                         <tr>
+                           <th scope="col">S</th>
+                           <th scope="col">L</th>
+                           <th scope="col">M</th>
+                           <th scope="col">K</th>
+                           <th scope="col">J</th>
+                            <th scope="col">V</th>
+                           <th scope="col">S</th>
+                         </tr>
+                       </thead>
+                         <h1> {{m.name}}</h1>
 
-        <button class="btn-primary" type="submit" value="Generate" ng-click="generate()"> Aplica </button>
+                       <tbody >
+                          <tr>
+                           <td  ng-repeat = "day in m.month">
+                             {{day}}
 
 
-        <div class="row">
-          <div class="col-md-6" ng-repeat= "m in month">
-            {{m.name}}
-            <div class="row">
-              <div class="col-sm-2" ng-repeat = "day in m.month">
-                {{day.date | date}} <br />
-                {{day.visible}} 
+                           </td>
 
-              </div>
+
+                         </tr>
+
+                       </tbody>
+                     </table>
+
+
+
+               </div>
+
+               <hr />
             </div>
 
-          </div>
-        </div>
-
-
-    </div>
-  </body>
+         </div>
+      </div>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   </body>
 </html>
