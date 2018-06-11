@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
-  <body class="container">
-    <h2>Todo</h2>
+  <body class="container-fluid">
+    <br />
+    <h2> Local JS </h2>
     <div ng-controller="Controller as control">
 
 
@@ -22,13 +23,22 @@
 
         <button class="btn-primary" type="submit" value="Generate" ng-click="generate()"> Aplica </button>
 
-		
 
-		<div ng-repeat="calendar in calendars" >
+        <div class="row">
+          <div class="col-md-6" ng-repeat= "m in month">
+            {{m.name}}
+            <div class="row">
+              <div class="col-sm-2" ng-repeat = "day in m.month">
+                {{day.date | date}} <br />
+                {{day.visible}} 
 
-			{{calendar.date}}
+              </div>
+            </div>
 
-		</div>
+          </div>
+        </div>
+
+
     </div>
   </body>
 </html>
