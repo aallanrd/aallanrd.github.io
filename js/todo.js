@@ -11,6 +11,13 @@ angular.module('App', [])
 
     var date = new Date(nb);
 
+    var day = date.getDate();
+
+    nb.setDate(0);
+
+    alert(nb);
+
+
 	  var start = 0;
 
 
