@@ -45,11 +45,16 @@ angular.module('App', [])
     dateOFF.setDate(dateOFF.getDate() - off);
     while(start_off != off){
 
+      var y = dateOFF.getFullYear();
+      var m = dateOFF.getMonth();
+      var d = dateOFF.getDate();
+
+      var dateX = (y + "-" + m + "-" + d);
 
       //Pushing Calendar to Array
         newDays = {
           "id": off,
-          "date": new Date(dateOFF),
+          "date": dateX,
           "day": dateOFF.getDate(),
           "day_id": dateOFF.getDay(),
           "day_name": $scope.getDayName(dateOFF.getDay()) ,
@@ -64,11 +69,19 @@ angular.module('App', [])
     while(start < $scope.number){
       var visible = true;
 
+      var y = date.getFullYear();
+      var m = date.getMonth();
+      var d = date.getDate();
+
+      var dateX = (y + "-" + m + "-" + d);
+    //  alert(dateX);
 
       //Pushing Calendar to Array
         newDays = {
           "id": start,
-          "date": new Date(date),
+          "date": dateX,
+          "badge":true,
+          "classname":"grade-1",
           "day": date.getDate(),
           "day_id": date.getDay(),
           "day_name": $scope.getDayName(date.getDay()),
@@ -81,11 +94,16 @@ angular.module('App', [])
         start = start + 1;
         date.setDate(date.getDate() + 1);
 
+
+
         if((actualM != date.getMonth()) || (start == $scope.number) ){
           //Pushing Calendar to Array
             newMonth= {
+              "date" : dateX,
               "id" :actualM,
+                "year" : date.getFullYear(),
               "name": $scope.getMonthName(actualM),
+              "month_number" : actualM + 1,
               "month": days
             };
           actualM = date.getMonth();
@@ -94,7 +112,34 @@ angular.module('App', [])
           days = [];
         }
 	}
+
+
+
     };
+
+    $scope.initC = function(index,m){
+
+      var eventData = [
+          {"date":"2018-06-01","badge":false,"title":"Example 1"},
+          {"date":"2015-07-02","badge":true,"title":"Example 2"}
+        ];
+
+      setTimeout(function(){
+
+        $("#demo"+index).zabuto_calendar({
+          data: m.days,
+          cell_border: true,
+          today: true,
+          year: m.year,
+          month: m.month_number ,
+          show_previous: false,
+          show_next: false,
+          weekstartson: 0,
+
+        })
+      }, 100);
+
+    }
 
     $scope.toWeeks = function(Month){
       let actual = Month[0].date;
