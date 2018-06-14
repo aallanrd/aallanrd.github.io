@@ -27,7 +27,7 @@
             </div>
          </div>
 
-         {{month}}
+
 
          <div class="row" >
             <div class="col-md-10 panel-primary" ng-repeat= "m in month">
@@ -50,12 +50,20 @@
 
                          </tr>
                        </thead>
-                         <h1> {{m}}</h1>
+                         <h1> {{m.name}}</h1>
 
                        <tbody >
                           <tr>
                            <td  ng-repeat = "day in m.month">
-                             {{day}}
+                             <div  class="btn btn-{{getDayColor(day)}}">
+                               {{day.date | date}}
+                               <br />
+                               {{day.day_name}}
+                               <br />
+                               {{day.id}}
+                               <br />
+                               {{day.visible}}
+                             </div>
 
                            </td>
 

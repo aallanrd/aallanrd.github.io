@@ -27,8 +27,11 @@ angular.module('App', [])
 	  var nb= $('#date').val();
     //
     var date = new Date(nb);
-
+    date.setDate(date.getDate() + 1);
+    var dateOFF = new Date(nb);
+    // Contadores
     var start = 0;
+    var start_off = 0;
     // mes actual
     var actualM = date.getMonth() ;
 
@@ -37,8 +40,26 @@ angular.module('App', [])
     var weeks = [];
 
     var dateOff = new Date(nb);
+    var off = date.getDay() + 1;
+
+    dateOFF.setDate(dateOFF.getDate() - off);
+    while(start_off != off){
 
 
+      //Pushing Calendar to Array
+        newDays = {
+          "id": off,
+          "date": new Date(dateOFF),
+          "day": dateOFF.getDate(),
+          "day_id": dateOFF.getDay(),
+          "day_name": $scope.getDayName(dateOFF.getDay()) ,
+          "visible": false
+        };
+        days.push(newDays);
+        start_off = start_off + 1;
+        dateOFF.setDate(dateOFF.getDate() + 1);
+
+    }
     //
     while(start < $scope.number){
       var visible = true;
