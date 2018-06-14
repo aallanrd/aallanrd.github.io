@@ -43,7 +43,7 @@ angular.module('App', [])
     var off = date.getDay() + 1;
 
     dateOFF.setDate(dateOFF.getDate() - off);
-    while(start_off != off){
+    while(start_off != off + 1){
 
       var y = dateOFF.getFullYear();
       var m = dateOFF.getMonth();

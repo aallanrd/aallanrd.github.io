@@ -12,23 +12,7 @@
 
       <script src="zabuto/zabuto_calendar.min.js"></script>
       <link rel="stylesheet" type="text/css" href="zabuto/zabuto_calendar.min.css">
-      <style>
-                  .grade-1 {
-                      background-color: #FA2601;
-                  }
-                  .grade-2 {
-                      background-color: #FA8A00;
-                  }
-                  .grade-3 {
-                      background-color: #FFEB00;
-                  }
-                  .grade-4 {
-                      background-color: #27AB00;
-                  }
-                  .purple {
-                      background-color: purple;
-                  }
-              </style>
+
    </head>
    <body class="container-fluid">
       <br />
@@ -61,15 +45,21 @@
 
          <div class="row" ng-repeat= "m in month track by $index">
 
-            <div class="col-md-4 " >
+            <div class="col-md-5 " >
                   <div >
                     <span style="font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; line-height: 18px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">
                     <div ng-init = "initC($index,m)" id="demo{{$index}}"></div></span>
                   </div>
 
             </div>
-            <div class="col-md-8">
-              {{m.month}}
+            <div class="col-md-7">
+                  <div class="row text-center" >
+                    <div class="col-md-2 panel panel-primary" ng-repeat=" day in m.month track by $index">
+                      {{day.date | date}}<br />
+                        {{day.visible }} <br />
+                        {{day.day_name }}
+                    </div>
+                  </div>
                 <hr />
             </div>
 
