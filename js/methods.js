@@ -27,15 +27,11 @@ angular.module('App', [])
 	  var nb= $('#date').val();
     //
     var date = new Date(nb);
-    date.setDate(date.getDate() + 1);
-    //
+
     var start = 0;
     // mes actual
     var actualM = date.getMonth() ;
 
-
-    //Contador Dias M = 2
-    var actualOff = date.getDay();
     //
     var days = [];
     var weeks = [];

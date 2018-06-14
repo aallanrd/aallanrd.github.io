@@ -2,7 +2,7 @@
 <html ng-app="App">
    <head>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
-      <script src="js/controller.js"></script>
+      <script src="js/methods.js"></script>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -27,6 +27,7 @@
             </div>
          </div>
 
+         {{month}}
 
          <div class="row" >
             <div class="col-md-10 panel-primary" ng-repeat= "m in month">
@@ -37,23 +38,24 @@
 
                  <table id="tableb" class="table ">
                        <thead>
+
                          <tr>
                            <th scope="col">S</th>
                            <th scope="col">L</th>
                            <th scope="col">M</th>
                            <th scope="col">K</th>
                            <th scope="col">J</th>
-                            <th scope="col">V</th>
+                           <th scope="col">V</th>
                            <th scope="col">S</th>
+
                          </tr>
                        </thead>
-                         <h1> {{m.name}}</h1>
+                         <h1> {{m}}</h1>
 
                        <tbody >
                           <tr>
                            <td  ng-repeat = "day in m.month">
                              {{day}}
-
 
                            </td>
 
