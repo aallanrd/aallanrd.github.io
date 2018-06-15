@@ -44,19 +44,17 @@
 <hr />
 
          <div class="row" ng-repeat= "m in month track by $index">
-
             <div class="col-md-5 " >
                   <div >
                     <span style="font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; line-height: 18px; white-space: pre-wrap; background-color: rgb(255, 255, 255);">
                     <div ng-init = "initC($index,m)" id="demo{{$index}}"></div></span>
                   </div>
-
             </div>
             <div class="col-md-7">
                   <div class="row text-center" >
                     <div class="col-md-2 panel panel-primary" ng-repeat=" day in m.month track by $index">
-                      {{day.date | date}}<br />
-                        {{day.visible }} <br />
+                        {{day.date | date}} <br />
+                        {{day.visible }}    <br />
                         {{day.day_name }}
                     </div>
                   </div>

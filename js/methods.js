@@ -55,6 +55,9 @@ angular.module('App', [])
         newDays = {
           "id": off,
           "date": dateX,
+          "title":"Tonight",
+          "body":"<p class=\"lead\">Party<\/p><p>Like it's 1999.<\/p>",
+          "footer":"At Paisley Park",
           "day": dateOFF.getDate(),
           "day_id": dateOFF.getDay(),
           "day_name": $scope.getDayName(dateOFF.getDay()) ,
