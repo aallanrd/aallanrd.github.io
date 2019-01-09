@@ -15,5 +15,4 @@ npm install
 npm start
 
 goto: localhost:8080
-  
-Deployed to Heroku -> https://nba-arenas.herokuapp.com
+ 
