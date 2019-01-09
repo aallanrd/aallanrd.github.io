@@ -1,0 +1,60 @@
+<div class="button-row">
+  <a mat-raised-button id="BackToDetailsButton" class="btn btn-secondary" style="background-color: #00538C" (click)="teamDetails()">Return to Details</a>
+</div>
+<form id="TeamForm" [formGroup]="teamForm" (ngSubmit)="onFormSubmit(teamForm.value)">
+  <mat-form-field class="example-full-width">
+    <input id="nameInput" matInput placeholder="Team Name" formControlName="name"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!teamForm.get('name').valid && teamForm.get('name').touched">Please enter NAME</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+	<input id="dateInput"  matInput placeholder="Founded" formControlName="founded" [errorStateMatcher]="matcher" [matDatepicker]="myDatepicker">
+	<mat-datepicker-toggle id="DatePickerToggle" matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+	<mat-datepicker id="MyDatePicker" #myDatepicker></mat-datepicker>
+	<mat-error>
+      <span *ngIf="!teamForm.get('founded').valid && teamForm.get('founded').touched">Please enter Founded Date</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <input id="coachInput"  matInput placeholder="Coach" formControlName="coach"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!teamForm.get('coach').valid && teamForm.get('coach').touched">Please enter Team Coach</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <input id="ownershipInput"  matInput placeholder="Ownership" formControlName="ownership" [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!teamForm.get('ownership').valid && teamForm.get('ownership').touched">Please enter Team Ownership</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <input id="affiliationsInput"  matInput placeholder="Affiliations" formControlName="affiliations"
+           [errorStateMatcher]="matcher">
+    <mat-error>
+      <span *ngIf="!teamForm.get('affiliations').valid && teamForm.get('affiliations').touched">Please enter Affiliations</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+	  <mat-select id="arenaSelection"  placeholder="Select an Arena" [(ngModel)]="arena_id" name="arena" formControlName="arena_id" [errorStateMatcher]="matcher" >
+		<mat-option *ngFor="let arena of arenas" [value]="arena._id">
+		 <span>{{arena.name}}</span> |
+		 <small>Location: {{arena.location}}</small>
+		</mat-option>
+	  </mat-select>
+	  <mat-error>
+		<span *ngIf="!teamForm.get('arena_id').valid && teamForm.get('arena_id').touched">Please select an Arena</span>
+	  </mat-error>
+  </mat-form-field>
+  
+  <div class="button-row">
+    <button id="teamEditBtn" type="submit" [disabled]="!teamForm.valid" mat-raised-button class="btn btn-secondary" style="background-color: #007A33">Submit</button>
+  </div>
+</form>

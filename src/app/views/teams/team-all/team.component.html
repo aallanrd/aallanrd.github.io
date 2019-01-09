@@ -1,0 +1,36 @@
+<div class="button-row">
+  <a mat-raised-button id="AddTeamButton" class="btn btn-secondary" style="background-color: #00538C" [routerLink]="['/team-create']">Add Team</a>
+</div>
+<div class="example-container mat-elevation-z8">
+  <table id="AllTeamTable" mat-table #table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element" class="isbn-col"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="founded">
+      <th mat-header-cell *matHeaderCellDef> Founded </th>
+      <td mat-cell *matCellDef="let element"> {{element.founded}} </td>
+    </ng-container>
+	
+    <ng-container matColumnDef="coach">
+      <th mat-header-cell *matHeaderCellDef> Coach </th>
+      <td mat-cell *matCellDef="let element"> {{element.coach}} </td>
+    </ng-container>
+	
+	<ng-container matColumnDef="ownership">
+      <th mat-header-cell *matHeaderCellDef> Ownership </th>
+      <td mat-cell *matCellDef="let element"> {{element.ownership}} </td>
+    </ng-container>
+	
+    <ng-container matColumnDef="affiliations">
+      <th mat-header-cell *matHeaderCellDef> Affiliation </th>
+      <td mat-cell *matCellDef="let element"> {{element.affiliations}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/team-details/', row._id]"></tr>
+  </table>
+</div>
+

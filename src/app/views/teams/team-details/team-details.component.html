@@ -1,0 +1,26 @@
+<div class="button-row">
+  <a mat-raised-button id="BackToTeamsButton" class="btn btn-secondary" style="background-color: #00538C" [routerLink]="['/teams']">Back to Teams</a>
+</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title id="teamName"><h2>{{team.name}}</h2></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <dl>
+      <dt>Name:</dt>
+      <dd>{{team.name}}</dd>
+      <dt>Founded:</dt>
+      <dd>{{team.founded}}</dd>
+      <dt>Coach:</dt>
+      <dd>{{team.coach}}</dd>
+      <dt>Ownership:</dt>
+      <dd>{{team.ownership}}</dd>
+      <dt>Affiliations:</dt>
+      <dd>{{team.affiliations}}</dd>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-raised-button id="EditTeamButton" class="btn btn-secondary" style="background-color: #00538C" [routerLink]="['/team-edit', team._id]"><mat-icon>edit</mat-icon>Modify</a>
+    <a mat-raised-button id="DeleteTeamButton" class="btn btn-secondary bg-danger" (click)="deleteTeam(team._id)"><mat-icon>delete</mat-icon>Delete</a>
+  </mat-card-actions>
+</mat-card>

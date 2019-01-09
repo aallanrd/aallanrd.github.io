@@ -1,0 +1,53 @@
+<div class="button-row">
+  <a mat-raised-button id="BackToArenasButton" class="btn btn-secondary" style="background-color: #00538C" [routerLink]="['/arenas']">Back to Arenas</a>
+</div>
+<form id="AddArenaForm" [formGroup]="arenaForm" (ngSubmit)="onFormSubmit(arenaForm.value)">
+
+  <mat-form-field class="example-full-width">
+    <input id="nameInput" matInput placeholder="Name" formControlName="name" [errorStateMatcher]="matcher">
+    <mat-error>
+      <span id="nameError" *ngIf="!arenaForm.get('name').valid && arenaForm.get('name').touched">Please enter Name</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+	<input id="dateInput" matInput placeholder="Opened" formControlName="opened" [errorStateMatcher]="matcher" [matDatepicker]="myDatepicker">
+	<mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+	<mat-datepicker #myDatepicker></mat-datepicker>
+	<mat-error>
+      <span id="dateError" *ngIf="!arenaForm.get('opened').valid && arenaForm.get('opened').touched">Please enter Opened Date</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <input id="costInput" matInput type="number" placeholder="Cost" formControlName="cost" [errorStateMatcher]="matcher">
+    <mat-error>
+      <span id="costError" *ngIf="!arenaForm.get('cost').valid && arenaForm.get('cost').touched">Please enter Cost</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <input id="locationInput" matInput placeholder="location" formControlName="location" [errorStateMatcher]="matcher">
+    <mat-error>
+      <span id="locationError" *ngIf="!arenaForm.get('location').valid && arenaForm.get('location').touched">Please enter Location</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <input id="addressInput" matInput placeholder="Address" formControlName="address" [errorStateMatcher]="matcher">
+    <mat-error>
+      <span id="addressError" *ngIf="!arenaForm.get('address').valid && arenaForm.get('address').touched">Please enter Address</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <input id="capacityInput" matInput type="number" placeholder="Capacity" formControlName="capacity" [errorStateMatcher]="matcher">
+    <mat-error>
+      <span id="capacityError" *ngIf="!arenaForm.get('capacity').valid && arenaForm.get('capacity').touched">Please enter Capacity</span>
+    </mat-error>
+  </mat-form-field>
+  
+  <div class="button-row">
+    <button id="arenaSubmitBtn" type="submit" [disabled]="!arenaForm.valid" mat-raised-button class="btn btn-secondary" style="background-color: #007A33">Submit</button>
+  </div>
+</form>
