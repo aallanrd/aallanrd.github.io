@@ -1,6 +1,5 @@
 # nba-arenas
   
-[![pipeline status](https://gitlab.com/lAleRojasl/nba-arenas/badges/master/pipeline.svg)](https://gitlab.com/lAleRojasl/nba-arenas/commits/master)
 
 Versions:
   
