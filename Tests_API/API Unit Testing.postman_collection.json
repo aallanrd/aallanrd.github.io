@@ -1,0 +1,1353 @@
+{
+	"info": {
+		"_postman_id": "df2734bf-ed2f-4195-a696-247b42112310",
+		"name": "API Unit Testing",
+		"description": "Unit testing for the NBA Arenas API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Valid Test Cases",
+					"item": [
+						{
+							"name": "Register User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "89677fd0-d9a9-4688-afea-13cb5022ef24",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test('Check status code. 201 for new user. 409 if already exists.', function () {",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 409]);",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"{{username}}\",\n\t\"email\":\"{{email}}\",\n\t\"password\":\"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								},
+								"description": "Should return 201 Created if new. Otherwise should return 409 Conflict."
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "33a6bb11-045e-4cd2-b8e6-1f7f8b4b0eca",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"var data = pm.response.json();",
+											"pm.environment.set(\"x-access-token\", data.token);",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"{{username}}\",\n\t\"password\":\"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check Authenticated Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "59aa215d-2327-4d8b-b04f-d384624de83c",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"var data = pm.response.json();",
+											"pm.test(\"Body response auth is true.\", function () {",
+											"    pm.expect(data.auth).to.eql(true);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/auth/me",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"me"
+									]
+								},
+								"description": "Should return Token Authenticated."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Invalid Test Cases",
+					"item": [
+						{
+							"name": "Register - Invalid Data",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "15fe0bc1-7f55-42c0-bb6e-01b0cb186668",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"\",\n\t\"email\":\"\",\n\t\"password\":\"\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/auth/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								},
+								"description": "Should return 200 if new. Otherwise"
+							},
+							"response": []
+						},
+						{
+							"name": "Login - Empty User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d2ab9c25-430a-4c5c-ae16-bca7dee9a876",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											"",
+											"pm.test(\"Status code name has string Not Found\", function () {",
+											"    pm.response.to.have.status(\"Not Found\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"\",\n\t\"password\":\"pass\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								},
+								"description": "Should return 404: No User Found"
+							},
+							"response": []
+						},
+						{
+							"name": "Login - Incorrect Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "37077d4c-9ef9-4924-806d-dcfd602343b8",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											"pm.test(\"Status code name has string Unauthorized\", function () {",
+											"    pm.response.to.have.status(\"Unauthorized\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"{{username}}\",\n\t\"password\":\"incorrectPassword\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/auth/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								},
+								"description": "Should return 401: Unauthorized"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Arenas",
+			"item": [
+				{
+					"name": "Valid Test Cases",
+					"item": [
+						{
+							"name": "Arena - Retrieve All",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "29236b58-94fd-4e61-b378-10152ee5c307",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Arena -  Create",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f3333c92-504b-43a3-b32c-626b44c2261a",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"var data = pm.response.json();",
+											"pm.environment.set(\"arena_id\", data._id);",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : \"Arena Test\",\r\n\t\"opened\" : \"01/01/1989\",\r\n\t\"cost\": 135000000,\r\n\t\"location\": \"Arena Location\",\r\n\t\"address\": \"Arena Address\",\r\n\t\"capacity\": 15800\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas"
+									]
+								},
+								"description": "Should create a new Arena and save the ID."
+							},
+							"response": []
+						},
+						{
+							"name": "Arena -  Update",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2fe5414c-0889-48c9-af5b-1296fd708147",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : \"Arena Update Test\",\r\n\t\"opened\" : \"01/01/1995\",\r\n\t\"cost\": 166000000,\r\n\t\"location\": \"Arena Location\",\r\n\t\"address\": \"Arena Address\",\r\n\t\"capacity\": 16000\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas/{{arena_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas",
+										"{{arena_id}}"
+									]
+								},
+								"description": "Should update the existing Arena."
+							},
+							"response": []
+						},
+						{
+							"name": "Arena -  Retrieve One",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "06551359-aeb3-4918-aec4-0137d65d94cd",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Arena name contains Update string.\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"Update\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : \"Arena Update Test\",\r\n\t\"opened\" : \"01/01/1995\",\r\n\t\"cost\": 166000000,\r\n\t\"location\": \"Arena Location\",\r\n\t\"address\": \"Arena Address\",\r\n\t\"capacity\": 16000,\r\n\t\"_id\": \"{{arena_id}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas/{{arena_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas",
+										"{{arena_id}}"
+									]
+								},
+								"description": "Should return existing Arena after update."
+							},
+							"response": []
+						},
+						{
+							"name": "Arena - Delete ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f8384ea-5394-42df-ad0e-86a2ab42128b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas/{{arena_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas",
+										"{{arena_id}}"
+									]
+								},
+								"description": "Should delete the existing Arena."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Invalid Test Cases",
+					"item": [
+						{
+							"name": "Arena - Unauthenticated - Retrieve All ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "778e6591-b141-41ef-b63f-2a8ca4ced7ee",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-invalid-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas"
+									]
+								},
+								"description": "Should return status 401 - Failed to Authenticate Token."
+							},
+							"response": []
+						},
+						{
+							"name": "Arena -  Invalid ID - Retrieve One",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "408dc0b1-47fb-4915-9c70-2ce8641396bc",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : \"Arena Update Test\",\r\n\t\"opened\" : \"01/01/1995\",\r\n\t\"cost\": 166000000,\r\n\t\"location\": \"Arena Location\",\r\n\t\"address\": \"Arena Address\",\r\n\t\"capacity\": 16000,\r\n\t\"_id\": \"{{arena_id}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas/{{invalid_arena_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas",
+										"{{invalid_arena_id}}"
+									]
+								},
+								"description": "Should return status 404. Not Found."
+							},
+							"response": []
+						},
+						{
+							"name": "Arena -  Invalid Data - Create",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f4d48723-f41d-4f65-ad09-eb6f91073406",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : \"\",\r\n\t\"opened\" : \"\",\r\n\t\"cost\": 0\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas"
+									]
+								},
+								"description": "Should return status 400 Bad Request."
+							},
+							"response": []
+						},
+						{
+							"name": "Arena -  Invalid ID - Update",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "eee97e96-d1b7-4f17-901f-6134681eae2f",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : \"Arena Update Test\",\r\n\t\"opened\" : \"01/01/1995\",\r\n\t\"cost\": 166000000,\r\n\t\"location\": \"Arena Location\",\r\n\t\"address\": \"Arena Address\",\r\n\t\"capacity\": 16000,\r\n\t\"_id\": \"{{invalid_arena_id}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas/{{invalid_arena_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas",
+										"{{invalid_arena_id}}"
+									]
+								},
+								"description": "Should return status 404. Not found."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "Valid Test Cases",
+					"item": [
+						{
+							"name": "Arena -  Create ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "539b2157-f1dc-4af3-8d35-43f34d4648f8",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"var data = pm.response.json();",
+											"pm.environment.set(\"arena_id\", data._id);",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\" : \"Arena Test\",\r\n\t\"opened\" : \"01/01/1989\",\r\n\t\"cost\": 135000000,\r\n\t\"location\": \"Arena Location\",\r\n\t\"address\": \"Arena Address\",\r\n\t\"capacity\": 15800\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas"
+									]
+								},
+								"description": "Should create a new Arena and save the ID."
+							},
+							"response": []
+						},
+						{
+							"name": "Teams - Retrieve All",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "29236b58-94fd-4e61-b378-10152ee5c307",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/teams",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Team -  Create ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9d6f7760-37f9-4fc3-b6b3-31db43a6879e",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"var data = pm.response.json();",
+											"pm.environment.set(\"team_id\", data._id);",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Test Team\",\r\n    \"founded\": \"09/08/1978\",\r\n    \"ownership\": \"Test Owner\",\r\n    \"coach\": \"Test Coach\",\r\n    \"affiliations\": \"Test affiliation\",\r\n    \"arena_id\" : \"{{arena_id}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/teams",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams"
+									]
+								},
+								"description": "Should create a new Team and save the ID."
+							},
+							"response": []
+						},
+						{
+							"name": "Team -  Update",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2fe5414c-0889-48c9-af5b-1296fd708147",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Test Update Team\",\r\n    \"founded\": \"09/08/1988\",\r\n    \"ownership\": \"Test Update Owner\",\r\n    \"coach\": \"Test Coach\",\r\n    \"affiliations\": \"Test affiliation\",\r\n    \"arena_id\" : \"{{arena_id}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/teams/{{team_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams",
+										"{{team_id}}"
+									]
+								},
+								"description": "Should update the existing Team."
+							},
+							"response": []
+						},
+						{
+							"name": "Teams - Retrieve One",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "29236b58-94fd-4e61-b378-10152ee5c307",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/teams/{{team_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams",
+										"{{team_id}}"
+									]
+								},
+								"description": "Should return status 200."
+							},
+							"response": []
+						},
+						{
+							"name": "Team - Delete",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f8384ea-5394-42df-ad0e-86a2ab42128b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/teams/{{team_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams",
+										"{{team_id}}"
+									]
+								},
+								"description": "Should delete the existing Team."
+							},
+							"response": []
+						},
+						{
+							"name": "Arena - Delete ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f8384ea-5394-42df-ad0e-86a2ab42128b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/arenas/{{arena_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"arenas",
+										"{{arena_id}}"
+									]
+								},
+								"description": "Should delete the existing Arena."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Invalid Test Cases",
+					"item": [
+						{
+							"name": "Team - Unauthenticated - Retrieve All",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "778e6591-b141-41ef-b63f-2a8ca4ced7ee",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 401\", function () {",
+											"    pm.response.to.have.status(401);",
+											"});",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-invalid-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/api/teams",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams"
+									]
+								},
+								"description": "Should return status 401 - Failed to Authenticate Token."
+							},
+							"response": []
+						},
+						{
+							"name": "Team -  Invalid ID - Retrieve One",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c07c9950-c5a4-4da5-91a2-16908c1932e8",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Test Update Team\",\r\n    \"founded\": \"09/08/1988\",\r\n    \"ownership\": \"Test Update Owner\",\r\n    \"coach\": \"Test Coach\",\r\n    \"affiliations\": \"Test affiliation\",\r\n    \"arena_id\" : \"{{arena_id}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/teams/{{invalid_team_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams",
+										"{{invalid_team_id}}"
+									]
+								},
+								"description": "Should return status 404 Not Found."
+							},
+							"response": []
+						},
+						{
+							"name": "Team -  Invalid Data - Create ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d71d59a2-9697-4d2d-bea9-126a1cdac5b6",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"\",\r\n    \"founded\": \"\",\r\n    \"ownership\": \"\",\r\n    \"coach\": \"\",\r\n    \"affiliations\": \"\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/teams",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams"
+									]
+								},
+								"description": "Should return status 400 Bad Request."
+							},
+							"response": []
+						},
+						{
+							"name": "Team -  Invalid ID - Update",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c07c9950-c5a4-4da5-91a2-16908c1932e8",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {",
+											"    pm.response.to.have.status(404);",
+											"});",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-access-token",
+										"value": "{{x-access-token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"name\": \"Test Update Team\",\r\n    \"founded\": \"09/08/1988\",\r\n    \"ownership\": \"Test Update Owner\",\r\n    \"coach\": \"Test Coach\",\r\n    \"affiliations\": \"Test affiliation\",\r\n    \"arena_id\" : \"{{arena_id}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/teams/{{invalid_team_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"teams",
+										"{{invalid_team_id}}"
+									]
+								},
+								"description": "Should return "
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "pass",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "userui",
+				"type": "string"
+			}
+		]
+	}
+}
