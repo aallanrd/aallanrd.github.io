@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+
+#preloader {
+	background-color: #e4545b;
+}
+.colored-text {
+	color: #e4545b;
+}
+.tp-banner a.btn1:hover {
+	border: 2px solid #e4545b;
+	background-color: #e4545b;
+}
+.tp-banner a.btn2 {
+	border: 2px solid #e4545b;
+	background-color: #e4545b;
+}
+.navbar-inverse {
+	background-color: #e4545b;
+}
+.section-heading .heading {
+	color: #e4545b;
+}
+.owl-theme .owl-controls .owl-page span {
+	background: #e4545b;
+}
+.education-timeline .programe {
+	color: #e4545b;
+}
+.education-timeline .education:hover .divider {
+	background-color: #e4545b;
+}
+.education-timeline .education:hover .duration {
+	color: #e4545b;
+}
+#process .items:hover {
+	background: #e4545b;
+}
+.work-experience-timeline .company-name {
+	color: #e4545b;
+}
+.work-experience-timeline .url a{
+	color: #e4545b;	
+}
+.work-experience-timeline .col-left:hover .arrow {
+	border-color: transparent #e4545b transparent transparent;
+}
+.work-experience-timeline .col-right:hover .arrow {
+	border-color: transparent transparent transparent #e4545b;
+}
+.work-experience-timeline .col-right:hover .duration, .work-experience-timeline .col-left:hover .duration {
+	color: #e4545b;
+}
+#services-carousel .items:hover .icon {
+	color: #e4545b;
+}
+#options ul li:hover a, #options ul li a.selected {
+	border: 2px solid #e4545b;
+	background-color: #e4545b;
+}
+.overlayzoom span.zoom {
+	background: rgb(228, 84, 90); /* RGBa with 0.6 opacity */
+	background: rgba(228, 84, 90, 0.7);
+}
+.portfolio-detail .heading {
+	color: #e4545b;
+}
+.links a {
+	color: #e4545b;
+}
+#video .play a:hover {
+	color: #e4545b;
+}
+#awards-carousel .items:hover .icon {
+	color: #e4545b;
+}
+#testimonials-carousel .items .emp-name {
+	color: #e4545b;
+}
+#contact {
+	background-color: #e4545b;
+}
+#contact .section-heading h1.icon-line i {
+	background: #e4545b;
+}
+#contact .contact-form .form button {
+	color: #e4545b;
+}
+#contact .contact-form .form button:hover {
+	background-color: #e4545b;
+}
+.social-icons ul li {
+	background-color: #e4545b;
+}
+#footer .desc i {
+	margin-bottom: 12px;
+	color: #e4545b;
+}
+.link-btn a {
+	background-color: #e4545b;
+	border: 4px solid #e4545b;
+}
+.link-btn a:hover {
+	border: 4px solid #e4545b;
+	color: #e4545b;
+}
+.link-btn-2 a {
+	background-color: #e4545b;
+	border: 4px solid #e4545b;
+}
+.link-btn-2 a:hover {
+	border: 4px solid #e4545b;
+	color: #e4545b;
+}
+.scrollup {
+	background-color: #e4545b;
+}
