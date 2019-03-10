@@ -45,6 +45,7 @@ function login(){
       confirmButtonText: 'Go'
     }).then(function(){
         localStorage.setItem("email", email);
+        localStorage.setItem("session", "Opened");
         location.replace('inicio/inicio.html');
     }).catch(function(reason){
         alert("The alert was dismissed by the user: "+reason);
@@ -82,15 +83,23 @@ function includeHTML() {
   }
 }
 
+function loadT(idTorneo){
+
+  var name = $('#torneo-'+idTorneo).html();
+  $('#torneo').html(name);
+}
 
 $( document ).ready(function() {
 
   includeHTML();
 
-setTimeout(function(){
-  var email = localStorage.getItem("email");
-  $('#email').html(email);
+  setTimeout(function(){
+      var email = localStorage.getItem("email");
+      if((email==null)|(email==undefined)|(email=='')){
+          $('#email').html('Not logged in');
+      }else{
+        $('#email').html(email);
+      }
+  }, 100);
 
-}, 100);
-
-});
+  });

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Login | Ping Pong FECOTEME</title>
+    <title>Torneos | Ping Pong FECOTEME</title>
     <link rel="icon" href="../icono.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,23 +12,27 @@
   </head>
   <body>
           <div w3-include-html="../navbar.html"></div>
-
-
         <div ><br><br><br>
           <div class="container">
           <div class="row">
-            <div class="col-sm">
+            <div class="col-sm-3">
+
+                <div class="list-group">
+                  <a id="torneo-0" href="#" class="list-group-item list-group-item-action active" onclick='loadT(0)'>
+                      2do Ranking Liga Menor
+                  </a>
+                  <a id="torneo-1" href="#" class="list-group-item list-group-item-action " onclick='loadT(1)'>2do Ranking Nacional Mayor</a>
+                  <a id="torneo-2" href="#" class="list-group-item list-group-item-action " onclick='loadT(2)'>CentroAmericano Mayor</a>
+                  <a id="torneo-3" href="#" class="list-group-item list-group-item-action " onclick='loadT(3)'>Torneo Dobles | Internacional </a>
+                  <a id="torneo-4" href="#" class="list-group-item list-group-item-action " onclick='loadT(4)'>Juegos Deportivos Nacionales</a>
+                </div>
+                <p class="mt-5 mb-3 text-muted">&copy; FECOTEME-2019 </p>
+            </div>
+            <div class="col-md-9 text-center">
+              <h1 id="torneo"> <span class="badge badge-danger"> Viendo </span></h1>
 
             </div>
-            <div class="col-sm text-center">
 
-
-                  <p class="mt-5 mb-3 text-muted">&copy; FECOTEME-2019 </p>
-
-            </div>
-            <div class="col-sm">
-
-            </div>
           </div>
         </div>
 
