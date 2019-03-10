@@ -89,6 +89,12 @@ function loadT(idTorneo){
   $('#torneo').html(name);
 }
 
+function loadP(idPartida){
+
+  var name = $('#partida-'+idPartida).html();
+  $('#partida').html(name);
+}
+
 $( document ).ready(function() {
 
   includeHTML();

@@ -8,15 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   </head>
-  <body>
-          <div w3-include-html="../navbar.html"></div>
+  <body style="font-family: 'Roboto', sans-serif;">
+          <div w3-include-html="navbar-inicio.html"></div>
         <div ><br><br><br>
           <div class="container">
           <div class="row">
             <div class="col-sm-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Inicio</a></li>
 
+                  <li class="breadcrumb-item active" aria-current="page">Torneos</li>
+                </ol>
+              </nav>
                 <div class="list-group">
                   <a id="torneo-0" href="#" class="list-group-item list-group-item-action active" onclick='loadT(0)'>
                       2do Ranking Liga Menor
@@ -29,8 +36,15 @@
                 <p class="mt-5 mb-3 text-muted">&copy; FECOTEME-2019 </p>
             </div>
             <div class="col-md-9 text-center">
-              <h1 id="torneo"> <span class="badge badge-danger"> Viendo </span></h1>
-
+              <h1 id="torneo"> </h1>
+              <h5>Lorem ipsum dolor sit amet consectetur adipiscing elit id pharetra,
+                ultrices maecenas sed potenti est vestibulum nisl non auctor habitasse
+                <h5>
+                <button type="button" class="btn btn-outline-primary">Inscribirme!</button>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Torneos</li>
+                </ol>
             </div>
 
           </div>

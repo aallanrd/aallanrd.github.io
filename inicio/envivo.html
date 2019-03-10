@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Login | Ping Pong FECOTEME</title>
+    <title>En Vivo | Ping Pong FECOTEME</title>
     <link rel="icon" href="../icono.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,23 +11,39 @@
 
   </head>
   <body>
-      <div w3-include-html="../navbar.html"></div>
-
+          <div w3-include-html="navbar-inicio.html"></div>
         <div ><br><br><br>
           <div class="container">
           <div class="row">
-            <div class="col-sm">
+            <div class="col-sm-4s">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+
+                  <li class="breadcrumb-item active" aria-current="page">En Vivo</li>
+                </ol>
+              </nav>
+                <div class="list-group">
+                  <a id="partida-1" href="#" class="list-group-item list-group-item-action "
+                  onclick='loadP(1)'>David Ramirez <span class="badge badge-secondary">1</span>
+                   vrs Carlos Jimenez <span class="badge badge-secondary">3</span> <br> 11:00 | 0/0/0 </a>
+                  <a id="partida-2" href="#" class="list-group-item list-group-item-action "
+                  onclick='loadP(2)'>Jose Solorzano <span class="badge badge-secondary">20</span>
+                   vrs Juan Carlos Hidalgo <span class="badge badge-secondary">32</span><br> 11:00 | 0/0/0</a>
+                  <a id="partida-3" href="#" class="list-group-item list-group-item-action "
+                  onclick='loadP(3)'>Cesar Cordoba <span class="badge badge-secondary">45</span>
+                  vrs Idani Japbeve <span class="badge badge-secondary">67</span> <br> 11:00 | 0/0/0</a>
+                  <a id="partida-4" href="#" class="list-group-item list-group-item-action "
+                  onclick='loadP(4)'>Drew Morris <span class="badge badge-secondary">77</span>
+                   vrs Jhone Doe <span class="badge badge-secondary">83</span><br> 11:00 | 0/0/0</a>
+                </div>
+                <p class="mt-5 mb-3 text-muted">&copy; FECOTEME-2019 </p>
+            </div>
+            <div class="col-md-8 text-center">
+              <h1 id="partida"> </h1><span class="badge badge-danger"> Viendo </span>
 
             </div>
-            <div class="col-sm text-center">
 
-                <h1> En vivo</h1>
-                  <p class="mt-5 mb-3 text-muted">&copy; FECOTEME-2019 </p>
-
-            </div>
-            <div class="col-sm">
-
-            </div>
           </div>
         </div>
 
