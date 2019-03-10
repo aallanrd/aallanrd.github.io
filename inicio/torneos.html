@@ -14,7 +14,7 @@
   <body style="font-family: 'Roboto', sans-serif;">
           <div w3-include-html="navbar-inicio.html"></div>
         <div ><br><br><br>
-          <div class="container">
+          <div class="container-fluid">
           <div class="row">
             <div class="col-sm-3">
               <nav aria-label="breadcrumb">
@@ -35,18 +35,97 @@
                 </div>
                 <p class="mt-5 mb-3 text-muted">&copy; FECOTEME-2019 </p>
             </div>
-            <div class="col-md-9 text-center">
+            <div class="col-md-6 ">
+              <div class="text-center" >
               <h1 id="torneo"> </h1>
               <h5>Lorem ipsum dolor sit amet consectetur adipiscing elit id pharetra,
                 ultrices maecenas sed potenti est vestibulum nisl non auctor habitasse
                 <h5>
-                <button type="button" class="btn btn-outline-primary">Inscribirme!</button>
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Torneos</li>
-                </ol>
+                <button type="button" class="btn btn-outline-primary disabled">Inscribirme</button>
+                <button type="button" class="btn btn-outline-danger">Configurar <i class="fas fa-cog"></i></button>
+              <hr>
             </div>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active"><a href="#" class='collapsed' data-toggle="collapse"
+                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Visión General</a></li>
+                  <li class="breadcrumb-item " aria-current="page"><a href="#" class='collapsed' data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Participantes</a></li>
+                  <li class="breadcrumb-item " aria-current="page"><a href="#" class='collapsed' data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Llaves</a></li>
+                  <li class="breadcrumb-item " aria-current="page"><a href="#" class='collapsed' data-toggle="collapse"
+                  data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Media</a></li>
+                  <li class="breadcrumb-item " aria-current="page"><a href="#" class='collapsed' data-toggle="collapse"
+                  data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">Estadísticas</a></li>
+                  <li class="breadcrumb-item " aria-current="page"><a href="#" class='collapsed' data-toggle="collapse"
+                  data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Anuncios</a></li>
 
+                </ol>
+                <div id="accordion">
+                  <div class="card">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        <h2>Detalles</h2>
+                        <label> Ubicación </label>
+                        <h4>Sala Nacional de Tenis de Mesa</h4>
+                        <label> Fecha y Hora </label>
+                        <h4>Sábado | 30 Marzo, 2019</h4>
+                        <h6>10:00 AM CT</h6>
+                        <label> Formato </label>
+                        <h4>1v1</h4>
+                        <h6>Se permiten pre-inscripciones de jugadores</h6>
+                        <label> Tipo de Juego </label>
+                        <h4>Sencillo</h4>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+              <div class="col-md-3 text-center">
+                <h1>Registro Cerrado</h1>
+                <h3>El registro a este evento esta deshabilitado</h3>
+              </div>
           </div>
         </div>
 
