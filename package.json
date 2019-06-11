@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "uikit": "^3.1.5"
+  },
+  "name": "aallanrd.github.io",
+  "version": "1.0.0",
+  "description": "Main project",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aallanrd/aallanrd.github.io.git"
+  },
+  "author": "Allan RD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aallanrd/aallanrd.github.io/issues"
+  },
+  "homepage": "https://github.com/aallanrd/aallanrd.github.io#readme"
+}
